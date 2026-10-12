@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Athiban Vijay - Accessibility Tester and Builder of Accessible Apps</title>
+<meta name="description" content="Athiban Vijay is an accessibility tester who builds accessible tools and apps for blind and low-vision users.">
+<style>
+:root{--bg:#0b1b33;--fg:#f4f7fb;--muted:#c9d6ea;--card:#13294b;--accent:#8fd0ff;--focus:#ffd54a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:1.125rem/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.skip{position:absolute;left:-999px;top:0;background:var(--focus);color:#000;padding:.75rem 1rem;z-index:10}
+.skip:focus{left:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+header,main,footer{max-width:50rem;margin:0 auto;padding:1.5rem}
+nav ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;padding:0;margin:0}
+h1{font-size:2.5rem;line-height:1.2;margin:1.5rem 0 .5rem}
+h2{font-size:1.75rem;margin:2.5rem 0 1rem;border-bottom:2px solid var(--card);padding-bottom:.5rem}
+h3{font-size:1.35rem;margin:0 0 .5rem}
+.lead{color:var(--muted);font-size:1.25rem}
+.project{background:var(--card);border-radius:.75rem;padding:1.25rem;margin:0 0 1.25rem}
+.project p{margin:.5rem 0}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<nav aria-label="Main">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<h1>Athiban Vijay</h1>
+<p class="lead">Accessibility tester. I build accessible tools and apps for blind and low-vision users.</p>
+</header>
+<main id="main">
+<section id="about" aria-labelledby="about-h">
+<h2 id="about-h">About</h2>
+<p>I am an accessibility tester based in Chennai, India, and a screen reader user myself. I test websites and apps for accessibility, and outside work I build tools for blind and low-vision people: NVDA add-ons, userscripts and Android apps.</p>
+</section>
+<section id="projects" aria-labelledby="projects-h">
+<h2 id="projects-h">Projects</h2>
+<article class="project">
+<h3>VisionMate</h3>
+<p>An NVDA add-on for Windows that describes images with AI, locally on your computer. Describe the current element, the whole screen or a clipboard image. Press once for a quick spoken description, twice for a detailed one in a window you can copy from. Automatic descriptions of unlabeled images are optional and off by default.</p>
+<p>After a one-time model download of about 1.5 GB it works offline, with no account, no API key and no cloud upload. Requires Windows 10 or 11 (64-bit) and NVDA 2024.1 or later. Source is publicly available under GPL v2 or later.</p>
+<p><a href="https://github.com/athee06/VisionMate">VisionMate on GitHub</a></p>
+</article>
+<article class="project">
+<h3>Beyond Pixels</h3>
+<p>An Android photo gallery for blind and low-vision users. Browse photos and albums, get optional AI-generated descriptions, listen with read-aloud support, give photos custom names and set accessibility preferences. Available on Google Play.</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.athee06.beyondpixels">Beyond Pixels on Google Play</a> | <a href="https://beyond-pixels-app.web.app">Beyond Pixels website</a></p>
+</article>
+<article class="project">
+<h3>Edge TTS for NVDA</h3>
+<p>An NVDA add-on and Android text-to-speech engine that brings Microsoft Edge's online neural voices (300+) to the NVDA screen reader on Windows, or to Android as a system TTS engine. Independent project, not affiliated with Microsoft.</p>
+<p><a href="https://github.com/athee06/edgeTtsForNvda">Edge TTS for NVDA on GitHub</a> | <a href="https://athee06.github.io/edgeTtsForNvda/">Project page</a></p>
+</article>
+<article class="project">
+<h3>Web Accessibility Heuristic Enhancer (a11y-engine)</h3>
+<p>A userscript that improves accessibility on websites as you browse: adds ARIA roles and labels to unlabeled buttons, links and form fields, adds keyboard support, handles focus in modal dialogs and announces infinite-scroll updates. Changes can be rolled back.</p>
+<p><a href="https://github.com/athee06/a11y-engine">a11y-engine on GitHub</a></p>
+</article>
+<p>More projects are on the way.</p>
+</section>
+<section id="services" aria-labelledby="svc-h">
+<h2 id="svc-h">Services</h2>
+<p>I take on freelance work in these areas.</p>
+<h3>Digital accessibility</h3>
+<p>Testing websites and apps with a screen reader and reporting what blocks users.</p>
+<h3>PDF accessibility</h3>
+<p>Checking PDF documents so they can be read with a screen reader.</p>
+<h3>Document accessibility</h3>
+<p>Checking documents so they work for people who use assistive technology.</p>
+<h3>Multimedia accessibility</h3>
+<p>Checking audio and video content for accessibility.</p>
+<h3>Building websites and apps</h3>
+<p>Designing and building websites and apps that are accessible from the start.</p>
+</section>
+</main>
+<footer id="contact">
+<h2>Contact</h2>
+<p>For freelance work or questions, reach me on any of these.</p>
+<ul>
+<li><a href="https://wa.me/918015018541">WhatsApp: +91 80150 18541</a></li>
+<li><a href="mailto:athiban0612@gmail.com">Email: athiban0612@gmail.com</a></li>
+<li><a href="https://t.me/Athee06">Telegram: @Athee06</a></li>
+<li><a href="https://www.linkedin.com/in/athibanv">LinkedIn</a></li>
+<li><a href="https://instagram.com/athiban.v">Instagram</a></li>
+<li><a href="https://github.com/athee06">GitHub</a></li>
+</ul>
+<p>&copy; 2026 Athiban Vijay</p>
+</footer>
+</body>
+</html>
