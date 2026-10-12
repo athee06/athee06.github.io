@@ -4,29 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Athiban Vijay - Accessibility Tester and Builder of Accessible Apps</title>
-<meta name="description" content="Athiban Vijay is an accessibility tester who builds accessible tools and apps for blind and low-vision users.">
+<meta name="description" content="Athiban Vijay is an accessibility tester and screen reader user who builds accessible tools and apps for blind and low-vision users, and offers accessibility services.">
 <style>
-:root{--bg:#0b1b33;--fg:#f4f7fb;--muted:#c9d6ea;--card:#13294b;--accent:#8fd0ff;--focus:#ffd54a}
+:root{--bg:#0a1730;--bg2:#0f2347;--card:#13294b;--line:#25406e;--fg:#f5f8fc;--muted:#cbd8ec;--accent:#8fd0ff;--accent-ink:#06132a;--focus:#ffd54a}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:1.125rem/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-.skip{position:absolute;left:-999px;top:0;background:var(--focus);color:#000;padding:.75rem 1rem;z-index:10}
+html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--fg);font:1.125rem/1.65 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--focus);color:#000;padding:.75rem 1rem;z-index:20;font-weight:600}
 .skip:focus{left:0}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-header,main,footer{max-width:50rem;margin:0 auto;padding:1.5rem}
-nav ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;padding:0;margin:0}
-h1{font-size:2.5rem;line-height:1.2;margin:1.5rem 0 .5rem}
-h2{font-size:1.75rem;margin:2.5rem 0 1rem;border-bottom:2px solid var(--card);padding-bottom:.5rem}
-h3{font-size:1.35rem;margin:0 0 .5rem}
-.lead{color:var(--muted);font-size:1.25rem}
-.project{background:var(--card);border-radius:.75rem;padding:1.25rem;margin:0 0 1.25rem}
-.project p{margin:.5rem 0}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+.top{background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;padding-top:1rem;padding-bottom:1rem}
+.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:1.2rem}
+nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--muted);text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--fg);border-bottom-color:var(--accent)}
+.hero{background:linear-gradient(160deg,var(--bg2),var(--bg));padding:4rem 0 3.5rem}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;margin:0 0 .75rem}
+h1{font-size:clamp(2.25rem,6vw,3.5rem);line-height:1.1;margin:0 0 1rem}
+.lead{font-size:1.3rem;color:var(--muted);max-width:42rem;margin:0 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:1rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.secondary{color:var(--accent)}
+.btn.secondary:hover{background:rgba(143,208,255,.12)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:2rem;margin:0 0 .5rem;line-height:1.2}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:44rem}
+h3{font-size:1.3rem;margin:0 0 .5rem;line-height:1.3}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));list-style:none;padding:0;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.75rem;padding:1.4rem;height:100%}
+.card p{margin:.5rem 0}
+.meta{color:var(--muted);font-size:1rem}
+.links{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin-top:1rem}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,26rem),1fr))}
+.note{margin-top:1.75rem;color:var(--muted)}
+.contact-list{list-style:none;padding:0;margin:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.contact-list a{display:block;background:var(--card);border:1px solid var(--line);border-radius:.6rem;padding:.9rem 1.1rem;text-decoration:none;font-weight:600}
+.contact-list a:hover{border-color:var(--accent)}
+.contact-list span{display:block;color:var(--muted);font-weight:400;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:1.75rem 0;color:var(--muted)}
+footer p{margin:0}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (max-width:30rem){.hero{padding:2.5rem 0}section{padding:2.5rem 0}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<header>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="#top">Athiban Vijay</a>
 <nav aria-label="Main">
 <ul>
 <li><a href="#about">About</a></li>
@@ -35,66 +64,91 @@ h3{font-size:1.35rem;margin:0 0 .5rem}
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-<h1>Athiban Vijay</h1>
-<p class="lead">Accessibility tester. I build accessible tools and apps for blind and low-vision users.</p>
+</div>
 </header>
 <main id="main">
+<div class="hero" id="top">
+<div class="wrap">
+<p class="eyebrow">Accessibility tester and builder</p>
+<h1>Athiban Vijay</h1>
+<p class="lead">Accessibility tester. I build accessible tools and apps for blind and low-vision users.</p>
+<div class="btns">
+<a class="btn primary" href="#contact">Get in touch</a>
+<a class="btn secondary" href="#projects">See my projects</a>
+</div>
+</div>
+</div>
 <section id="about" aria-labelledby="about-h">
+<div class="wrap">
 <h2 id="about-h">About</h2>
-<p>I am an accessibility tester based in Chennai, India, and a screen reader user myself. I test websites and apps for accessibility, and outside work I build tools for blind and low-vision people: NVDA add-ons, userscripts and Android apps.</p>
+<p class="sub">I am an accessibility tester based in Chennai, India, and a screen reader user myself.</p>
+<p>I test websites and apps for accessibility, so I know first-hand what works and what blocks people who rely on a screen reader. Outside work I build tools for blind and low-vision people: NVDA add-ons, userscripts and Android apps. I am also offering accessibility and building services to others.</p>
+</div>
 </section>
 <section id="projects" aria-labelledby="projects-h">
+<div class="wrap">
 <h2 id="projects-h">Projects</h2>
-<article class="project">
+<p class="sub">Tools and apps I have built for blind and low-vision users.</p>
+<ul class="grid two">
+<li><article class="card">
 <h3>VisionMate</h3>
-<p>An NVDA add-on for Windows that describes images with AI, locally on your computer. Describe the current element, the whole screen or a clipboard image. Press once for a quick spoken description, twice for a detailed one in a window you can copy from. Automatic descriptions of unlabeled images are optional and off by default.</p>
-<p>After a one-time model download of about 1.5 GB it works offline, with no account, no API key and no cloud upload. Requires Windows 10 or 11 (64-bit) and NVDA 2024.1 or later. Source is publicly available under GPL v2 or later.</p>
-<p><a href="https://github.com/athee06/VisionMate">VisionMate on GitHub</a></p>
-</article>
-<article class="project">
+<p class="meta">NVDA add-on for Windows</p>
+<p>Describes images with AI, locally on your computer. Describe the current element, the whole screen or a clipboard image. Press once for a quick spoken description, twice for a detailed one in a window you can copy from. Automatic descriptions of unlabeled images are optional and off by default.</p>
+<p>After a one-time model download of about 1.5 GB it works offline, with no account, no API key and no cloud upload. Requires Windows 10 or 11 (64-bit) and NVDA 2024.1 or later. The source is publicly available under GPL v2 or later.</p>
+<div class="links"><a href="https://github.com/athee06/VisionMate">VisionMate on GitHub</a></div>
+</article></li>
+<li><article class="card">
 <h3>Beyond Pixels</h3>
-<p>An Android photo gallery for blind and low-vision users. Browse photos and albums, get optional AI-generated descriptions, listen with read-aloud support, give photos custom names and set accessibility preferences. Available on Google Play.</p>
-<p><a href="https://play.google.com/store/apps/details?id=com.athee06.beyondpixels">Beyond Pixels on Google Play</a> | <a href="https://beyond-pixels-app.web.app">Beyond Pixels website</a></p>
-</article>
-<article class="project">
+<p class="meta">Android photo gallery</p>
+<p>A photo gallery for blind and low-vision users. Browse photos and albums, get optional AI-generated descriptions, listen with read-aloud support, give photos custom names and set accessibility preferences. Available on Google Play.</p>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.athee06.beyondpixels">Beyond Pixels on Google Play</a> <a href="https://beyond-pixels-app.web.app">Beyond Pixels website</a></div>
+</article></li>
+<li><article class="card">
 <h3>Edge TTS for NVDA</h3>
-<p>An NVDA add-on and Android text-to-speech engine that brings Microsoft Edge's online neural voices (300+) to the NVDA screen reader on Windows, or to Android as a system TTS engine. Independent project, not affiliated with Microsoft.</p>
-<p><a href="https://github.com/athee06/edgeTtsForNvda">Edge TTS for NVDA on GitHub</a> | <a href="https://athee06.github.io/edgeTtsForNvda/">Project page</a></p>
-</article>
-<article class="project">
+<p class="meta">NVDA add-on and Android text-to-speech engine</p>
+<p>Brings Microsoft Edge's online neural voices (300+) to the NVDA screen reader on Windows, or to Android as a system text-to-speech engine. An independent project, not affiliated with Microsoft.</p>
+<div class="links"><a href="https://github.com/athee06/edgeTtsForNvda">Edge TTS for NVDA on GitHub</a> <a href="https://athee06.github.io/edgeTtsForNvda/">Project page</a></div>
+</article></li>
+<li><article class="card">
 <h3>Web Accessibility Heuristic Enhancer (a11y-engine)</h3>
-<p>A userscript that improves accessibility on websites as you browse: adds ARIA roles and labels to unlabeled buttons, links and form fields, adds keyboard support, handles focus in modal dialogs and announces infinite-scroll updates. Changes can be rolled back.</p>
-<p><a href="https://github.com/athee06/a11y-engine">a11y-engine on GitHub</a></p>
-</article>
-<p>More projects are on the way.</p>
+<p class="meta">Userscript for websites</p>
+<p>Improves accessibility on websites as you browse: adds ARIA roles and labels to unlabeled buttons, links and form fields, adds keyboard support, handles focus in modal dialogs and announces infinite-scroll updates. Changes can be rolled back.</p>
+<div class="links"><a href="https://github.com/athee06/a11y-engine">a11y-engine on GitHub</a></div>
+</article></li>
+</ul>
+<p class="note">More projects are on the way.</p>
+</div>
 </section>
-<section id="services" aria-labelledby="svc-h">
-<h2 id="svc-h">Services</h2>
-<p>I take on freelance work in these areas.</p>
-<h3>Digital accessibility</h3>
-<p>Testing websites and apps with a screen reader and reporting what blocks users.</p>
-<h3>PDF accessibility</h3>
-<p>Checking PDF documents so they can be read with a screen reader.</p>
-<h3>Document accessibility</h3>
-<p>Checking documents so they work for people who use assistive technology.</p>
-<h3>Multimedia accessibility</h3>
-<p>Checking audio and video content for accessibility.</p>
-<h3>Building websites and apps</h3>
-<p>Designing and building websites and apps that are accessible from the start.</p>
+<section id="services" aria-labelledby="services-h">
+<div class="wrap">
+<h2 id="services-h">Services I offer</h2>
+<p class="sub">I'm offering these services. Get in touch to talk about what you need.</p>
+<ul class="grid">
+<li class="card"><h3>Digital accessibility</h3><p>Testing websites and apps with a screen reader and reporting what blocks users.</p></li>
+<li class="card"><h3>PDF accessibility</h3><p>Checking PDF documents so they can be read with a screen reader.</p></li>
+<li class="card"><h3>Document accessibility</h3><p>Checking documents so they work for people who use assistive technology.</p></li>
+<li class="card"><h3>Multimedia accessibility</h3><p>Checking audio and video content for accessibility.</p></li>
+<li class="card"><h3>Building websites and apps</h3><p>Designing and building websites and apps that are accessible from the start.</p></li>
+</ul>
+</div>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+<div class="wrap">
+<h2 id="contact-h">Contact</h2>
+<p class="sub">I'm offering these services to anyone who needs them. To talk about your project or ask a question, reach me on any of these.</p>
+<ul class="contact-list">
+<li><a href="https://wa.me/918015018541"><span>WhatsApp</span> +91 80150 18541</a></li>
+<li><a href="mailto:athiban0612@gmail.com"><span>Email</span> athiban0612@gmail.com</a></li>
+<li><a href="https://t.me/Athee06"><span>Telegram</span> @Athee06</a></li>
+<li><a href="https://www.linkedin.com/in/athibanv"><span>LinkedIn</span> linkedin.com/in/athibanv</a></li>
+<li><a href="https://instagram.com/athiban.v"><span>Instagram</span> @athiban.v</a></li>
+<li><a href="https://github.com/athee06"><span>GitHub</span> github.com/athee06</a></li>
+</ul>
+</div>
 </section>
 </main>
-<footer id="contact">
-<h2>Contact</h2>
-<p>For freelance work or questions, reach me on any of these.</p>
-<ul>
-<li><a href="https://wa.me/918015018541">WhatsApp: +91 80150 18541</a></li>
-<li><a href="mailto:athiban0612@gmail.com">Email: athiban0612@gmail.com</a></li>
-<li><a href="https://t.me/Athee06">Telegram: @Athee06</a></li>
-<li><a href="https://www.linkedin.com/in/athibanv">LinkedIn</a></li>
-<li><a href="https://instagram.com/athiban.v">Instagram</a></li>
-<li><a href="https://github.com/athee06">GitHub</a></li>
-</ul>
-<p>&copy; 2026 Athiban Vijay</p>
+<footer>
+<div class="wrap"><p>&copy; 2026 Athiban Vijay</p></div>
 </footer>
 </body>
 </html>
